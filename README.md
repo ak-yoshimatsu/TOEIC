@@ -11,16 +11,41 @@
 
 ## ディレクトリ構成
 
-```md
+```text
 TOEIC/
 ├── articles/          # 学習教材（読み物・語彙リストなど）
 ├── questions/
 │   ├── Part5/         # 短文穴埋め問題
 │   └── Part7/         # 長文読解問題
-└── answers/
-    ├── Part5/         # Part5の回答・解説
-    └── Part7/         # Part7の回答・解説
+├── answers/
+│   ├── Part5/         # Part5の回答・解説
+│   └── Part7/         # Part7の回答・解説
+└── web/               # ブラウザ学習UIサーバー
+    ├── server.js
+    ├── package.json
+    └── public/
 ```
+
+## Web アプリ
+
+問題の表示・回答選択・解説閲覧をブラウザで行えるローカルサーバーです。Claude Code スキルが生成した MD ファイルをリアルタイムで検知して自動反映します。
+
+### 起動
+
+```bash
+cd web
+npm install   # 初回のみ
+npm start
+# → http://localhost:3000
+```
+
+### 使い方
+
+1. `http://localhost:3000` をブラウザで開く
+2. Claude Code で `/question` を実行 → 問題が自動表示される
+3. ブラウザで選択肢を選んで「回答する」
+4. Claude Code で `/answer` を実行 → 解説が自動表示される
+5. サイドバーの学習ログから過去問を確認できる
 
 ## スラッシュコマンド
 
