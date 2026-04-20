@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TOEIC Part 5</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <aside id="sidebar">
+      <h2>学習ログ</h2>
+      <ul id="log-list"></ul>
+    </aside>
+    <main id="main">
+      <section id="question-section">
+        <p id="question-theme"></p>
+        <div id="question-body"></div>
+        <form id="choices-form"></form>
+        <button id="submit-btn" disabled>回答する</button>
+        <p id="status-msg"></p>
+      </section>
+      <section id="answer-section" hidden>
+        <h3>解説</h3>
+        <div id="answer-body"></div>
+      </section>
+      <section id="empty-state">
+        <p>Claude Code で <code>/question</code> を実行すると問題が表示されます。</p>
+      </section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

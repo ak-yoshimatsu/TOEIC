@@ -1,0 +1,13 @@
+{
+  "name": "toeic-web",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "chokidar": "^3.6.0",
+    "express": "^4.19.0",
+    "ws": "^8.17.0"
+  }
+}
